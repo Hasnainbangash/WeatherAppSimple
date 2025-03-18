@@ -16,7 +16,7 @@ struct PersistenceController {
 
     // MARK: - 3. INITIALIZATION (load the persistent store)
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Todo_App")
+        container = NSPersistentContainer(name: "WeatherAppSimple")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
