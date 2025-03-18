@@ -13,26 +13,28 @@ struct WeatherItemView: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Hassan Abdal")
-                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                        .font(.system(size: 25, weight: .bold, design: .rounded))
                         .foregroundColor(Color.white)
                     
                     Text("2:25 PM")
-                        .fontWeight(.semibold)
+                        .font(.system(size: 15, weight: .medium, design: .rounded))
                 } //: VSTACK
                 
                 Spacer()
                 
                 Text("26°")
-                    .font(.system(size: 50, weight: .medium, design: .rounded))
+                    .font(.system(size: 53, weight: .light, design: .rounded))
                     .foregroundColor(Color.white)
             } //: HSTACK
             
             HStack {
                 Text("Sunny")
+                    .font(.system(size: 16, weight: .medium, design: .rounded))
                 
                 Spacer()
                 
                 Text("H:26° L:11°")
+                    .font(.system(size: 15, weight: .medium, design: .rounded))
             } //: HSTACK
         } //: VSTACK
     }
