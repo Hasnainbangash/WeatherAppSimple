@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct WeatherItemView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    
     var body: some View {
         VStack(spacing: 25) {
             HStack {
@@ -48,6 +52,8 @@ struct WeatherItemView: View {
         )
     }
 }
+
+// MARK: - PREVIEW
 
 #Preview {
     WeatherItemView()

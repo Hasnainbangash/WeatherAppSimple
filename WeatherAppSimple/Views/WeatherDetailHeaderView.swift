@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct WeatherDetailHeaderView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    
     var body: some View {
         VStack(alignment: .center) {
             Text("Seongnam-si")
@@ -25,6 +29,8 @@ struct WeatherDetailHeaderView: View {
         } //: VSTACK
     }
 }
+
+// MARK: - PREVIEW
 
 #Preview {
     WeatherDetailHeaderView()

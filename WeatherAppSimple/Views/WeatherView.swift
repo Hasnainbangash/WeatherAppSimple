@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct WeatherView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    
     var body: some View {
         NavigationView {
             List {
@@ -32,6 +36,8 @@ struct WeatherView: View {
         } //: NAVIGATION
     }
 }
+
+// MARK: - PREVIEW
 
 #Preview {
     WeatherView()
