@@ -37,6 +37,15 @@ struct WeatherItemView: View {
                     .font(.system(size: 15, weight: .medium, design: .rounded))
             } //: HSTACK
         } //: VSTACK
+        .padding()
+        .cornerRadius(10)
+        .background(
+            Image("WeatherImage")
+                .resizable()
+                .opacity(0.5)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .frame(width: 370, height: 140)
+        )
     }
 }
 
