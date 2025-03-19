@@ -38,6 +38,16 @@ struct WeatherView: View {
             .navigationBarTitle("Weather", displayMode: .large)
             .listStyle(.plain)
             .scrollIndicators(.hidden)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        // Action
+                    }, label: {
+                        Image(systemName: "plus")
+                            .resizable()
+                    })
+                }
+            }
         } //: NAVIGATION
     }
 }
