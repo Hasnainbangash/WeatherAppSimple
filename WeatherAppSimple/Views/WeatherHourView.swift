@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WeatherHourlyView: View {
+struct WeatherHourView: View {
     // MARK: - PROPERTIES
     
     // MARK: - BODY
@@ -33,6 +33,6 @@ struct WeatherHourlyView: View {
 // MARK: - PREVIEW
 
 #Preview {
-    WeatherHourlyView()
+    WeatherHourView()
         .preferredColorScheme(.dark)
 }
