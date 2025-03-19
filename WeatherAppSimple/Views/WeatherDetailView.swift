@@ -14,30 +14,30 @@ struct WeatherDetailView: View {
     
     var body: some View {
         ZStack {
-            
+            // MARK: - BACKGROUND
             Image("WeatherImage1")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             
-            List {
-                // MARK: - HEADER VIEW
-                Section {
-                    HStack(alignment: .center) {
-                        Spacer()
-                        WeatherDetailHeaderView()
-                        Spacer()
-                    } //: HSTACK
-                } //: SECTION
-                
-                // MARK: - HOURLY WEATHER VIEW
-                HourlyWeatherView()
-                
-                TenDayWeatherView()
-                
-            } //: LIST
-            .listStyle(PlainListStyle())
-            .scrollContentBackground(.hidden)
-            .background(Color.clear)
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    // MARK: - HEADER VIEW
+                    Section {
+                        HStack(alignment: .center) {
+                            Spacer()
+                            WeatherDetailHeaderView()
+                            Spacer()
+                        } //: HSTACK
+                    } //: SECTION
+                    
+                    // MARK: - HOURLY WEATHER VIEW
+                    HourlyWeatherView()
+                    
+                    TenDayWeatherView()
+                    
+                } //: VSTACK
+                .padding()
+            } //: SCROLL
         } //: ZSTACK
     }
 }
