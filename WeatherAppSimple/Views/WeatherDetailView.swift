@@ -15,6 +15,14 @@ struct WeatherDetailView: View {
     var body: some View {
         List {
             // MARK: - HEADER
+            Section {
+                HStack(alignment: .center) {
+                    Spacer()
+                    WeatherDetailHeaderView()
+                    Spacer()
+                }
+            }
+            
         } //: LIST
     }
 }
