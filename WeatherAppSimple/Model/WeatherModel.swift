@@ -21,41 +21,17 @@ struct WeatherEntry: Codable {
     let dt: Int
     let main: MainWeather
     let weather: [WeatherCondition]
-    let clouds: Clouds
-    let wind: Wind
-    let visibility: Int
-    let pop: Double
-    let sys: Sys
-    let dt_txt: String
 }
 
 // MARK: - MainWeather
 struct MainWeather: Codable {
-    let temp, feels_like, temp_min, temp_max: Double
-    let pressure, sea_level, grnd_level, humidity: Int
+    let temp, temp_min, temp_max: Double
 }
 
 // MARK: - WeatherCondition
 struct WeatherCondition: Codable {
     let id: Int
     let main, description, icon: String
-}
-
-// MARK: - Clouds
-struct Clouds: Codable {
-    let all: Int
-}
-
-// MARK: - Wind
-struct Wind: Codable {
-    let speed: Double
-    let deg: Int
-    let gust: Double?
-}
-
-// MARK: - Sys
-struct Sys: Codable {
-    let pod: String
 }
 
 // MARK: - City
