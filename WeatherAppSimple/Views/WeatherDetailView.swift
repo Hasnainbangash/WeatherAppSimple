@@ -13,23 +13,32 @@ struct WeatherDetailView: View {
     // MARK: - BODY
     
     var body: some View {
-        List {
-            // MARK: - HEADER VIEW
-            Section {
-                HStack(alignment: .center) {
-                    Spacer()
-                    WeatherDetailHeaderView()
-                    Spacer()
-                } //: HSTACK
-            } //: SECTION
+        ZStack {
             
-            // MARK: - HOURLY WEATHER VIEW
-            HourlyWeatherView()
+            Image("WeatherImage1")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
             
-            TenDayWeatherView()
-            
-        } //: LIST
-        .listStyle(PlainListStyle())
+            List {
+                // MARK: - HEADER VIEW
+                Section {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        WeatherDetailHeaderView()
+                        Spacer()
+                    } //: HSTACK
+                } //: SECTION
+                
+                // MARK: - HOURLY WEATHER VIEW
+                HourlyWeatherView()
+                
+                TenDayWeatherView()
+                
+            } //: LIST
+            .listStyle(PlainListStyle())
+            .scrollContentBackground(.hidden)
+            .background(Color.clear)
+        } //: ZSTACK
     }
 }
 
