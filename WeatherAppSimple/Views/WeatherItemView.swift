@@ -10,13 +10,15 @@ import SwiftUI
 struct WeatherItemView: View {
     // MARK: - PROPERTIES
     
+    let weather: Weather = Bundle.main.decode("WeatherData.json")
+    
     // MARK: - BODY
     
     var body: some View {
         VStack(spacing: 25) {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Hassan Abdal")
+                    Text(weather.city.name)
                         .font(.system(size: 25, weight: .bold, design: .rounded))
                         .foregroundColor(Color.white)
                     
@@ -26,18 +28,18 @@ struct WeatherItemView: View {
                 
                 Spacer()
                 
-                Text("26°")
+                Text("\(Int(weather.list[0].main.temp))°")
                     .font(.system(size: 53, weight: .light, design: .rounded))
                     .foregroundColor(Color.white)
             } //: HSTACK
             
             HStack {
-                Text("Sunny")
+                Text(weather.list[0].weather[0].main ?? "Sunny")
                     .font(.system(size: 16, weight: .medium, design: .rounded))
                 
                 Spacer()
                 
-                Text("H:26° L:11°")
+                Text("H:\(Int(weather.list[0].main.temp_min))° L:\(Int(weather.list[0].main.temp_max))°")
                     .font(.system(size: 15, weight: .medium, design: .rounded))
             } //: HSTACK
         } //: VSTACK
@@ -56,6 +58,7 @@ struct WeatherItemView: View {
 // MARK: - PREVIEW
 
 #Preview {
+    let weatherData: Weather = Bundle.main.decode("WeatherData.json")
     WeatherItemView()
         .padding()
         .preferredColorScheme(.dark)
