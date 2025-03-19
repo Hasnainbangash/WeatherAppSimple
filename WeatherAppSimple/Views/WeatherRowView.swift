@@ -13,27 +13,33 @@ struct WeatherRowView: View {
     // MARK: - BODY
     
     var body: some View {
-        HStack(spacing: 20) {
-            // MARK: - WEATHER WEEKDAY
-            Text("TODAY")
-                .font(.system(size: 22, weight: .medium, design: .rounded))
+        VStack(alignment: .center, spacing: 12) {
+            HStack(alignment: .center, spacing: 20) {
+                // MARK: - WEATHER WEEKDAY
+                Text("TODAY")
+                    .font(.system(size: 22, weight: .medium, design: .rounded))
+                    .layoutPriority(1)
+                    
+                
+                // MARK: - WEATHER IMAGE
+                Image(systemName: "sun.max")
+                    .resizable()
+                    .foregroundColor(Color.yellow)
+                    .frame(width: 28, height: 26, alignment: .center)
+                
+                // MARK: - WEATHER MINIMUM TEMPERATURE
+                Text("15°")
+                    .font(.system(size: 22, weight: .medium, design: .rounded))
+                    .foregroundColor(Color.gray)
+                
+                TemperatureRangeView(minTemp: 15, maxTemp: 29)
+                
+                Text("15°")
+                    .font(.system(size: 22, weight: .medium, design: .rounded))
+            } //: HSTACK
             
-            // MARK: - WEATHER IMAGE
-            Image(systemName: "sun.max")
-                .resizable()
-                .foregroundColor(Color.yellow)
-                .frame(width: 28, height: 26, alignment: .center)
-            
-            // MARK: - WEATHER MINIMUM TEMPERATURE
-            Text("15°")
-                .font(.system(size: 22, weight: .medium, design: .rounded))
-                .foregroundColor(Color.gray)
-            
-            TemperatureRangeView(minTemp: 15, maxTemp: 29)
-            
-            Text("15°")
-                .font(.system(size: 22, weight: .medium, design: .rounded))
-        } //: HSTACK
+            Divider()
+        } //: VSTACK
     }
 }
 

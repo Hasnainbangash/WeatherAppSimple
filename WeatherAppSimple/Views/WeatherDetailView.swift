@@ -20,13 +20,16 @@ struct WeatherDetailView: View {
                     Spacer()
                     WeatherDetailHeaderView()
                     Spacer()
-                }
-            }
+                } //: HSTACK
+            } //: SECTION
             
             // MARK: - HOURLY WEATHER VIEW
             HourlyWeatherView()
             
+            TenDayWeatherView()
+            
         } //: LIST
+        .listStyle(PlainListStyle())
     }
 }
 

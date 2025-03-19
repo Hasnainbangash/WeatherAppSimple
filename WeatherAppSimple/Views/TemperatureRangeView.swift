@@ -30,7 +30,7 @@ struct TemperatureRangeView: View {
                     .frame(width: width, height: 5)
             } //: ZSTACK
         } //: GEOMETRY
-        .frame(width: 100, height: 5)
+        .frame(width: 80, height: 5)
     }
 }
 
