@@ -34,7 +34,7 @@ struct WeatherItemView: View {
             } //: HSTACK
             
             HStack {
-                Text(weather.list[0].weather[0].main ?? "Sunny")
+                Text(weather.list[0].weather[0].main)
                     .font(.system(size: 16, weight: .medium, design: .rounded))
                 
                 Spacer()
@@ -58,7 +58,7 @@ struct WeatherItemView: View {
 // MARK: - PREVIEW
 
 #Preview {
-    let weatherData: Weather = Bundle.main.decode("WeatherData.json")
+    // let weatherData: Weather = Bundle.main.decode("WeatherData.json")
     WeatherItemView()
         .padding()
         .preferredColorScheme(.dark)
