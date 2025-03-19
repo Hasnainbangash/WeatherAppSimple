@@ -10,6 +10,7 @@ import SwiftUI
 struct WeatherView: View {
     // MARK: - PROPERTIES
     
+    @StateObject var cityManager: AddCityManager = AddCityManager()
     @State var showAddCityView: Bool = false
     
     // MARK: - BODY
@@ -50,7 +51,7 @@ struct WeatherView: View {
                             .resizable()
                     })
                     .sheet(isPresented: $showAddCityView) {
-                        AddCityView()
+                        AddCityView(cityManager: cityManager)
                     }
                 }
             }

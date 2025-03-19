@@ -10,6 +10,7 @@ import SwiftUI
 struct AddCityView: View {
     // MARK: - PROPERTIES
     @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject var cityManager: AddCityManager
     @State var cityName: String = ""
     
     // MARK: - BODY
@@ -27,6 +28,7 @@ struct AddCityView: View {
                 
                 Button(action: {
                     print("City Added: \(cityName)")
+                    cityManager.addCity(context: self.viewContext, name: cityName)
                 }) {
                     Text("Add City")
                         .frame(maxWidth: .infinity)
@@ -49,7 +51,7 @@ struct AddCityView: View {
 
 #Preview {
     let context = PersistenceController.shared.container.viewContext
-    AddCityView()
+    AddCityView(cityManager: AddCityManager())
         .environment(\.managedObjectContext, context)
         .preferredColorScheme(.dark)
 }
