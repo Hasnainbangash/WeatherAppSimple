@@ -16,12 +16,16 @@ struct AddCityView: View {
     var body: some View {
         VStack(spacing: 20) {
             Text("Enter City Name")
-                .font(.title2)
+                .font(.title)
                 .fontWeight(.bold)
             
             TextField("City Name", text: $cityName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.system(size: 22))
                 .padding()
+                .frame(height: 60)
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(12)
+                .padding(.horizontal)
             
             Button(action: {
                 print("City Added: \(cityName)")
