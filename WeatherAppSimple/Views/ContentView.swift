@@ -12,12 +12,13 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     var body: some View {
-        NavigationView {
-            List {
-                
-            } //: LIST
-            .navigationBarTitle("Weather", displayMode: .large)
-        } //: NAVIGATION
+        TabView {
+            ForEach(1...3, id: \.self) { _ in
+                WeatherDetailItemView()
+            }
+        }
+        .tabViewStyle(.page)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -25,4 +26,5 @@ struct ContentView: View {
     let context = PersistenceController.shared.container.viewContext
     ContentView()
         .environment(\.managedObjectContext, context)
+        .preferredColorScheme(.dark)
 }
