@@ -13,7 +13,7 @@ struct WeatherRowView: View {
     // MARK: - BODY
     
     var body: some View {
-        HStack {
+        HStack(spacing: 20) {
             // MARK: - WEATHER WEEKDAY
             Text("TODAY")
                 .font(.system(size: 22, weight: .medium, design: .rounded))
