@@ -37,6 +37,7 @@ struct WeatherView: View {
             } //: LIST
             .navigationBarTitle("Weather", displayMode: .large)
             .listStyle(.plain)
+            .scrollIndicators(.hidden)
         } //: NAVIGATION
     }
 }
