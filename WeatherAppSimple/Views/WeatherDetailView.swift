@@ -33,6 +33,7 @@ struct WeatherDetailView: View {
                     // MARK: - HOURLY WEATHER VIEW
                     HourlyWeatherView()
                     
+                    // MARK: - TEN DAYS WEATHER VIEW
                     TenDayWeatherView()
                     
                 } //: VSTACK
