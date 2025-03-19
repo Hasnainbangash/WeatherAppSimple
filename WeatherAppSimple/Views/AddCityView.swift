@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddCityView: View {
     // MARK: - PROPERTIES
+    @Environment(\.managedObjectContext) private var viewContext
     @State var cityName: String = ""
     
     // MARK: - BODY
@@ -48,6 +49,8 @@ struct AddCityView: View {
 // MARK: - PREVIEW
 
 #Preview {
+    let context = PersistenceController.shared.container.viewContext
     AddCityView()
+        .environment(\.managedObjectContext, context)
         .preferredColorScheme(.dark)
 }

@@ -10,3 +10,5 @@ import SwiftUI
 // MARK: - WEATHER DATA
 
 var weatherData: [Weather] = []
+
+var weatherCoreData: [WeatherCoreData] = [ ]
