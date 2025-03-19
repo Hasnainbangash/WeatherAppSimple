@@ -1,5 +1,5 @@
 //
-//  WeatherData.swift
+//  CityData.swift
 //  WeatherAppSimple
 //
 //  Created by Elexoft on 19/03/2025.
@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-// MARK: - WEATHER DATA
+// MARK: - CITY DATA
 
-var weatherData: [Weather] = []
+var cityData: [CityDetails] = []
