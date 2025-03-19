@@ -30,6 +30,8 @@ struct WeatherDetailView: View {
                         } //: HSTACK
                     } //: SECTION
                     
+                    Spacer(minLength: 30)
+                    
                     // MARK: - HOURLY WEATHER VIEW
                     HourlyWeatherView()
                     
