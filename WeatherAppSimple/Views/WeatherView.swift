@@ -30,6 +30,10 @@ struct WeatherView: View {
                 WeatherItemView()
                     .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
                     .listRowSeparator(.hidden)
+                
+                WeatherItemView()
+                    .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
+                    .listRowSeparator(.hidden)
             } //: LIST
             .navigationBarTitle("Weather", displayMode: .large)
             .listStyle(.plain)
