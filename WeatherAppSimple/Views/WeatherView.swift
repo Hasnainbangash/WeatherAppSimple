@@ -25,7 +25,7 @@ struct WeatherView: View {
         NavigationView {
             List {
                 ForEach(self.cityDetails, id: \.self) { cityDetails in
-                    WeatherItemView()
+                    WeatherItemView(cityName: cityDetails.name ?? "Wah")
                         .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
                         .listRowSeparator(.hidden)
                 }
