@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WeatherDetailView: View {
+struct WeatherDetailItemView: View {
     // MARK: - PPROPERTIES
     
     // MARK: - BODY
@@ -48,6 +48,6 @@ struct WeatherDetailView: View {
 // MARK: - PREVIEW
 
 #Preview {
-    WeatherDetailView()
+    WeatherDetailItemView()
         .preferredColorScheme(.dark)
 }
