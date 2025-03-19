@@ -10,6 +10,8 @@ import SwiftUI
 struct WeatherView: View {
     // MARK: - PROPERTIES
     
+    @State var showAddCityView: Bool = false
+    
     // MARK: - BODY
     
     var body: some View {
@@ -42,10 +44,14 @@ struct WeatherView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
                         // Action
+                        self.showAddCityView.toggle()
                     }, label: {
                         Image(systemName: "plus")
                             .resizable()
                     })
+                    .sheet(isPresented: $showAddCityView) {
+                        AddCityView()
+                    }
                 }
             }
         } //: NAVIGATION
