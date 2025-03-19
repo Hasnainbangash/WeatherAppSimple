@@ -9,7 +9,6 @@ import SwiftUI
 import CoreData
 
 class AddCityManager: ObservableObject {
-    @Published var cityData: [CityDetails] = []
 
     // Function to add a new city to Core Data
     func addCity(context: NSManagedObjectContext, name: String) {
