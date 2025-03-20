@@ -10,6 +10,7 @@ import SwiftUI
 struct AddCityView: View {
     // MARK: - PROPERTIES
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var cityManager: AddCityManager
     @State var cityName: String = ""
     
@@ -29,6 +30,7 @@ struct AddCityView: View {
                 Button(action: {
                     print("City Added: \(cityName)")
                     cityManager.addCity(context: self.viewContext, name: cityName)
+                    self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Add City")
                         .frame(maxWidth: .infinity)
