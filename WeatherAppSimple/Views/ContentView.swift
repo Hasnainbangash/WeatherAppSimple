@@ -10,11 +10,12 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    @FetchRequest(entity: CityDetails.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CityDetails.name, ascending: true)]) var cityDetails: FetchedResults<CityDetails>
+    
     var body: some View {
         TabView {
-            ForEach(1...3, id: \.self) { _ in
-                WeatherDetailItemView(cityName: "Wah")
+            ForEach(cityDetails, id: \.self) { cityDetails in
+                WeatherDetailItemView(cityName: cityDetails.name ?? "Wah")
             }
         }
         .tabViewStyle(.page)
