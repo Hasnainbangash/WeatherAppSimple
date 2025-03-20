@@ -25,10 +25,14 @@ struct WeatherDetailItemView: View {
     // Map weather condition to SF Symbols icon
     func getWeatherIcon(_ condition: String) -> String {
         switch condition.lowercased() {
-        case "clear": return "sun.max.fill"
-        case "clouds": return "cloud.fill"
-        case "rain": return "cloud.rain.fill"
-        default: return "questionmark.circle"
+        case "clear":
+            return "sun.max.fill"
+        case "clouds":
+            return "cloud.fill"
+        case "rain":
+            return "cloud.rain.fill"
+        default:
+            return "questionmark.circle"
         }
     }
     
