@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A6567E10E3BA7855F5D3C3D24B73844 /* Pods-WeatherAppSimpleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 346D4E15229AF022066D544D7ECCBAB9 /* Pods-WeatherAppSimpleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198A804A425BC88BDDA2EBF192F02B92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		4A6F5D16E6C47BCEF1BADDBA54EAF20F /* Pods-WeatherAppSimple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17675CB880BF91C7E38019075D65CFA1 /* Pods-WeatherAppSimple-dummy.m */; };
+		4AA61F3CBC70767062632C09D9131E2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		596E87125B66F978B239ED2BF1BB4C92 /* Pods-WeatherAppSimpleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE535D550AC2122DC6B22EA2D1BC8C /* Pods-WeatherAppSimpleTests-dummy.m */; };
+		5D13633C9B89F392A6D44D5B465F4A4B /* Pods-WeatherAppSimple-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB4DF038F8AC1794026D5392F10E77F /* Pods-WeatherAppSimple-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F7431E31F7FBF91BAFAA340A49362D /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 777E029CFB497FFD57070109361B415B /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C91D6EC3B6A5D0A55ED4548BC36496E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		F69F84946CA7F69E323FE524AEF55CF9 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A1088C2499BD8F66A4CD1E533873ED /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A274D8F5623E6835EF76EE8BAF82F3CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C812ED2A0F16074C68D6A26E2568DB7;
+			remoteInfo = "Pods-WeatherAppSimple";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016141C897D1C9ADFACEBC6AF47CD0DF /* Pods-WeatherAppSimple-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherAppSimple-Info.plist"; sourceTree = "<group>"; };
+		1410A8FEF661D34CBE7A3DFF9CAE4888 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		17675CB880BF91C7E38019075D65CFA1 /* Pods-WeatherAppSimple-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherAppSimple-dummy.m"; sourceTree = "<group>"; };
+		1A2367552DE33B8EEC50579B618556C2 /* Pods-WeatherAppSimpleTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeatherAppSimpleTests"; path = Pods_WeatherAppSimpleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C4324E6E0F64FBA0B49030EF2B5449F /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		33D32EFAEBBDB546799EC0E258C28E6D /* Pods-WeatherAppSimpleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherAppSimpleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		346D4E15229AF022066D544D7ECCBAB9 /* Pods-WeatherAppSimpleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherAppSimpleTests-umbrella.h"; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		51F430AB1717B1611F6C1A716A1A0DF9 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53771F3AC2EBF111AFC6A149A418A5D7 /* Pods-WeatherAppSimpleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherAppSimpleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		665814533611A558DB06C64A02E6C3F8 /* Pods-WeatherAppSimpleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherAppSimpleTests-Info.plist"; sourceTree = "<group>"; };
+		6F9D030A51B0DEBA6D6EB2B3E40B40C8 /* Pods-WeatherAppSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherAppSimple.release.xcconfig"; sourceTree = "<group>"; };
+		6FC690B21823F9BF24CE9C9B3B675747 /* Pods-WeatherAppSimpleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherAppSimpleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		777E029CFB497FFD57070109361B415B /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests-umbrella.h"; sourceTree = "<group>"; };
+		7F23924F7590AADCA39C769990A3B0A7 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests.modulemap"; sourceTree = "<group>"; };
+		80820132008F32086786B901A1CABC4F /* Pods-WeatherAppSimple-WeatherAppSimpleUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeatherAppSimple-WeatherAppSimpleUITests"; path = Pods_WeatherAppSimple_WeatherAppSimpleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82FC1B53ED1384F466C6DC4B71B9A4A2 /* Pods-WeatherAppSimple-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherAppSimple-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8EDE535D550AC2122DC6B22EA2D1BC8C /* Pods-WeatherAppSimpleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherAppSimpleTests-dummy.m"; sourceTree = "<group>"; };
+		97868181EBACD317CA1766F6E80A794D /* Pods-WeatherAppSimpleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherAppSimpleTests.release.xcconfig"; sourceTree = "<group>"; };
+		9BC621450768806D437D4623C51AD77A /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ADB4DF038F8AC1794026D5392F10E77F /* Pods-WeatherAppSimple-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherAppSimple-umbrella.h"; sourceTree = "<group>"; };
+		B3A9CEF6D59D207BFF5D4FE29DFC7D6F /* Pods-WeatherAppSimple */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeatherAppSimple"; path = Pods_WeatherAppSimple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9020DD671D2FFE7B5D1D18573C2676 /* Pods-WeatherAppSimple.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherAppSimple.modulemap"; sourceTree = "<group>"; };
+		D80900E0DADC027F09649788A1DB83D6 /* Pods-WeatherAppSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherAppSimple.debug.xcconfig"; sourceTree = "<group>"; };
+		E2978DB6D275315CE6319B5C351B04A6 /* Pods-WeatherAppSimple-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherAppSimple-acknowledgements.plist"; sourceTree = "<group>"; };
+		E7A1088C2499BD8F66A4CD1E533873ED /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests-dummy.m"; sourceTree = "<group>"; };
+		EF6E0C59F1301ABF33BA7346E577DFD2 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherAppSimple-WeatherAppSimpleUITests-Info.plist"; sourceTree = "<group>"; };
+		F6C83FF818A70D3740DE5AB341C74279 /* Pods-WeatherAppSimpleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherAppSimpleTests.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		158EBB5AE4162E7FC70C05A926AB9FC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198A804A425BC88BDDA2EBF192F02B92 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFD4D3297B68BF1AD1105136F606857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C91D6EC3B6A5D0A55ED4548BC36496E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4422DF5172BD6271F0276346F1EB4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AA61F3CBC70767062632C09D9131E2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849EA4D49E31C5074079397998D9815D /* Pods-WeatherAppSimple-WeatherAppSimpleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7F23924F7590AADCA39C769990A3B0A7 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.modulemap */,
+				51F430AB1717B1611F6C1A716A1A0DF9 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-acknowledgements.markdown */,
+				2C4324E6E0F64FBA0B49030EF2B5449F /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-acknowledgements.plist */,
+				E7A1088C2499BD8F66A4CD1E533873ED /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-dummy.m */,
+				EF6E0C59F1301ABF33BA7346E577DFD2 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-Info.plist */,
+				777E029CFB497FFD57070109361B415B /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-umbrella.h */,
+				9BC621450768806D437D4623C51AD77A /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.debug.xcconfig */,
+				1410A8FEF661D34CBE7A3DFF9CAE4888 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.release.xcconfig */,
+			);
+			name = "Pods-WeatherAppSimple-WeatherAppSimpleUITests";
+			path = "Target Support Files/Pods-WeatherAppSimple-WeatherAppSimpleUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				DEA391E7FD0009B764CDC7AF1FCA584E /* Products */,
+				D8BE83E6858D052B09263F8877243FAF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFFFCF926111F48ED5B6B7F7D0D5ADFA /* Pods-WeatherAppSimpleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6C83FF818A70D3740DE5AB341C74279 /* Pods-WeatherAppSimpleTests.modulemap */,
+				6FC690B21823F9BF24CE9C9B3B675747 /* Pods-WeatherAppSimpleTests-acknowledgements.markdown */,
+				33D32EFAEBBDB546799EC0E258C28E6D /* Pods-WeatherAppSimpleTests-acknowledgements.plist */,
+				8EDE535D550AC2122DC6B22EA2D1BC8C /* Pods-WeatherAppSimpleTests-dummy.m */,
+				665814533611A558DB06C64A02E6C3F8 /* Pods-WeatherAppSimpleTests-Info.plist */,
+				346D4E15229AF022066D544D7ECCBAB9 /* Pods-WeatherAppSimpleTests-umbrella.h */,
+				53771F3AC2EBF111AFC6A149A418A5D7 /* Pods-WeatherAppSimpleTests.debug.xcconfig */,
+				97868181EBACD317CA1766F6E80A794D /* Pods-WeatherAppSimpleTests.release.xcconfig */,
+			);
+			name = "Pods-WeatherAppSimpleTests";
+			path = "Target Support Files/Pods-WeatherAppSimpleTests";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8BE83E6858D052B09263F8877243FAF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA5B6889ED0381DF6DD7ED730751A718 /* Pods-WeatherAppSimple */,
+				849EA4D49E31C5074079397998D9815D /* Pods-WeatherAppSimple-WeatherAppSimpleUITests */,
+				CFFFCF926111F48ED5B6B7F7D0D5ADFA /* Pods-WeatherAppSimpleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DEA391E7FD0009B764CDC7AF1FCA584E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3A9CEF6D59D207BFF5D4FE29DFC7D6F /* Pods-WeatherAppSimple */,
+				80820132008F32086786B901A1CABC4F /* Pods-WeatherAppSimple-WeatherAppSimpleUITests */,
+				1A2367552DE33B8EEC50579B618556C2 /* Pods-WeatherAppSimpleTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FA5B6889ED0381DF6DD7ED730751A718 /* Pods-WeatherAppSimple */ = {
+			isa = PBXGroup;
+			children = (
+				CC9020DD671D2FFE7B5D1D18573C2676 /* Pods-WeatherAppSimple.modulemap */,
+				82FC1B53ED1384F466C6DC4B71B9A4A2 /* Pods-WeatherAppSimple-acknowledgements.markdown */,
+				E2978DB6D275315CE6319B5C351B04A6 /* Pods-WeatherAppSimple-acknowledgements.plist */,
+				17675CB880BF91C7E38019075D65CFA1 /* Pods-WeatherAppSimple-dummy.m */,
+				016141C897D1C9ADFACEBC6AF47CD0DF /* Pods-WeatherAppSimple-Info.plist */,
+				ADB4DF038F8AC1794026D5392F10E77F /* Pods-WeatherAppSimple-umbrella.h */,
+				D80900E0DADC027F09649788A1DB83D6 /* Pods-WeatherAppSimple.debug.xcconfig */,
+				6F9D030A51B0DEBA6D6EB2B3E40B40C8 /* Pods-WeatherAppSimple.release.xcconfig */,
+			);
+			name = "Pods-WeatherAppSimple";
+			path = "Target Support Files/Pods-WeatherAppSimple";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B09A20CC71A2D8DA486CCFF339C7C09 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F7431E31F7FBF91BAFAA340A49362D /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49733407BCD34DC9B9AC2032ABE612A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D13633C9B89F392A6D44D5B465F4A4B /* Pods-WeatherAppSimple-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3659E469530A9103A8CA46EC5B4ADE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6567E10E3BA7855F5D3C3D24B73844 /* Pods-WeatherAppSimpleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5EA4037EA8D66AF69C843B02A8DEAA1D /* Pods-WeatherAppSimpleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9248E1982B9CF5CD15F01C5DB9711EF0 /* Build configuration list for PBXNativeTarget "Pods-WeatherAppSimpleTests" */;
+			buildPhases = (
+				B3659E469530A9103A8CA46EC5B4ADE0 /* Headers */,
+				CB15441E360E651E560EC406252E6A2A /* Sources */,
+				E4422DF5172BD6271F0276346F1EB4F5 /* Frameworks */,
+				7514B039502BA3AA390FB6E3B9B597A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05331A307D2F865AE5144A542D0607D6 /* PBXTargetDependency */,
+			);
+			name = "Pods-WeatherAppSimpleTests";
+			productName = Pods_WeatherAppSimpleTests;
+			productReference = 1A2367552DE33B8EEC50579B618556C2 /* Pods-WeatherAppSimpleTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		7C812ED2A0F16074C68D6A26E2568DB7 /* Pods-WeatherAppSimple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DB32ECF224FC09370D170A17209EF79 /* Build configuration list for PBXNativeTarget "Pods-WeatherAppSimple" */;
+			buildPhases = (
+				49733407BCD34DC9B9AC2032ABE612A4 /* Headers */,
+				FB21A4C2900AB3A9554C3E37DF41D298 /* Sources */,
+				158EBB5AE4162E7FC70C05A926AB9FC5 /* Frameworks */,
+				E8FD75136CA246FDEC10AC9C52644767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WeatherAppSimple";
+			productName = Pods_WeatherAppSimple;
+			productReference = B3A9CEF6D59D207BFF5D4FE29DFC7D6F /* Pods-WeatherAppSimple */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4C85EE797497C7D9244F3D5A8AED4B0 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB6C75E3F52D436819D81B04A26F4FD1 /* Build configuration list for PBXNativeTarget "Pods-WeatherAppSimple-WeatherAppSimpleUITests" */;
+			buildPhases = (
+				0B09A20CC71A2D8DA486CCFF339C7C09 /* Headers */,
+				0CA87D624170ECD3E4373231E5013BCF /* Sources */,
+				AAFD4D3297B68BF1AD1105136F606857 /* Frameworks */,
+				C3E9C1598DA30626E2955BF88B3329A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WeatherAppSimple-WeatherAppSimpleUITests";
+			productName = Pods_WeatherAppSimple_WeatherAppSimpleUITests;
+			productReference = 80820132008F32086786B901A1CABC4F /* Pods-WeatherAppSimple-WeatherAppSimpleUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DEA391E7FD0009B764CDC7AF1FCA584E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C812ED2A0F16074C68D6A26E2568DB7 /* Pods-WeatherAppSimple */,
+				B4C85EE797497C7D9244F3D5A8AED4B0 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests */,
+				5EA4037EA8D66AF69C843B02A8DEAA1D /* Pods-WeatherAppSimpleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7514B039502BA3AA390FB6E3B9B597A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3E9C1598DA30626E2955BF88B3329A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FD75136CA246FDEC10AC9C52644767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CA87D624170ECD3E4373231E5013BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F69F84946CA7F69E323FE524AEF55CF9 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB15441E360E651E560EC406252E6A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596E87125B66F978B239ED2BF1BB4C92 /* Pods-WeatherAppSimpleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB21A4C2900AB3A9554C3E37DF41D298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A6F5D16E6C47BCEF1BADDBA54EAF20F /* Pods-WeatherAppSimple-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05331A307D2F865AE5144A542D0607D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WeatherAppSimple";
+			target = 7C812ED2A0F16074C68D6A26E2568DB7 /* Pods-WeatherAppSimple */;
+			targetProxy = A274D8F5623E6835EF76EE8BAF82F3CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74366EF295D802CEFB0FCA51727D2F86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53771F3AC2EBF111AFC6A149A418A5D7 /* Pods-WeatherAppSimpleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherAppSimpleTests/Pods-WeatherAppSimpleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherAppSimpleTests/Pods-WeatherAppSimpleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		76B630C738F5E84F71CFD7AD9CEFC008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1410A8FEF661D34CBE7A3DFF9CAE4888 /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherAppSimple-WeatherAppSimpleUITests/Pods-WeatherAppSimple-WeatherAppSimpleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherAppSimple-WeatherAppSimpleUITests/Pods-WeatherAppSimple-WeatherAppSimpleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7CBF195AC72D90EC6444A385E52DAEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F9D030A51B0DEBA6D6EB2B3E40B40C8 /* Pods-WeatherAppSimple.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherAppSimple/Pods-WeatherAppSimple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherAppSimple/Pods-WeatherAppSimple.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		98AB49490D732BB62C9F966CC1A06338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80900E0DADC027F09649788A1DB83D6 /* Pods-WeatherAppSimple.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherAppSimple/Pods-WeatherAppSimple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherAppSimple/Pods-WeatherAppSimple.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE463A532B61E3BB4FC9C7B3D9C43277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97868181EBACD317CA1766F6E80A794D /* Pods-WeatherAppSimpleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherAppSimpleTests/Pods-WeatherAppSimpleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherAppSimpleTests/Pods-WeatherAppSimpleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B83D570E4FF9CFEC35855E98C11E7747 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC621450768806D437D4623C51AD77A /* Pods-WeatherAppSimple-WeatherAppSimpleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherAppSimple-WeatherAppSimpleUITests/Pods-WeatherAppSimple-WeatherAppSimpleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherAppSimple-WeatherAppSimpleUITests/Pods-WeatherAppSimple-WeatherAppSimpleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DB32ECF224FC09370D170A17209EF79 /* Build configuration list for PBXNativeTarget "Pods-WeatherAppSimple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98AB49490D732BB62C9F966CC1A06338 /* Debug */,
+				7CBF195AC72D90EC6444A385E52DAEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9248E1982B9CF5CD15F01C5DB9711EF0 /* Build configuration list for PBXNativeTarget "Pods-WeatherAppSimpleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74366EF295D802CEFB0FCA51727D2F86 /* Debug */,
+				AE463A532B61E3BB4FC9C7B3D9C43277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6C75E3F52D436819D81B04A26F4FD1 /* Build configuration list for PBXNativeTarget "Pods-WeatherAppSimple-WeatherAppSimpleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B83D570E4FF9CFEC35855E98C11E7747 /* Debug */,
+				76B630C738F5E84F71CFD7AD9CEFC008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
