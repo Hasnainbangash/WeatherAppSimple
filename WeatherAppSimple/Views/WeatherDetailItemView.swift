@@ -28,7 +28,7 @@ struct WeatherDetailItemView: View {
                     Section {
                         HStack(alignment: .center) {
                             Spacer()
-                            WeatherDetailHeaderView()
+                            WeatherDetailHeaderView(cityName: cityName)
                             Spacer()
                         } //: HSTACK
                     } //: SECTION
