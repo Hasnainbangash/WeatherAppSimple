@@ -27,7 +27,7 @@ struct ContentView: View {
                 Image(systemName: "list.dash")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 27, height: 27, alignment: .center)
+                    .frame(width: 25, height: 25, alignment: .center)
             })
             .accentColor(Color.white)
             .padding()

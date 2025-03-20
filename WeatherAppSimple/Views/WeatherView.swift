@@ -47,10 +47,25 @@ struct WeatherView: View {
                     }, label: {
                         Image(systemName: "plus")
                             .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25, alignment: .center)
                     })
+                    .accentColor(Color.white)
                     .sheet(isPresented: $showAddCityView) {
                         AddCityView(cityManager: cityManager)
                     }
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        // ACTION
+                    }, label: {
+                        Image(systemName: "ellipsis.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25, alignment: .center)
+                    })
+                    .accentColor(Color.white)
                 }
             }
             .animation(.default)
