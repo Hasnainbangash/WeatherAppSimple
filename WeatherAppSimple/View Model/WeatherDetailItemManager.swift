@@ -30,6 +30,12 @@ class WeatherDetailItemManager: ObservableObject {
         return formatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
     }
     
+    func formatDate(_ timestamp: Int) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        return formatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
+    }
+    
     func extractDailyForecast(from list: [WeatherEntry]) -> [DailyWeatherData] {
         var dailyForecast: [DailyWeatherData] = []
         var lastDate: String = ""
