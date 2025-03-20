@@ -13,6 +13,10 @@ struct WeatherDetailItemView: View {
     var cityName: String
     @StateObject private var weatherFetcher = WeatherFetch()
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State var showCloseIcon: Bool
+    
     // MARK: - FUNCTIONS
     
     // Convert timestamp to readable hour format
@@ -80,6 +84,20 @@ struct WeatherDetailItemView: View {
                 .padding()
             } //: SCROLL
         } //: ZSTACK
+        .overlay(alignment: .topTrailing) {
+            Button(action: {
+                // ACTION
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "xmark")
+                    .resizable()
+                    .scaledToFit()
+                    .opacity(showCloseIcon ? 1 : 0)
+                    .frame(width: 20, height: 20, alignment: .center)
+            }
+            .padding()
+            .accentColor(Color.white)
+        }
         .onAppear {
             weatherFetcher.fetchWeather(cityName: cityName)
         }
@@ -89,6 +107,6 @@ struct WeatherDetailItemView: View {
 // MARK: - PREVIEW
 
 #Preview {
-    WeatherDetailItemView(cityName: "Wah")
+    WeatherDetailItemView(cityName: "Wah", showCloseIcon: true)
         .preferredColorScheme(.dark)
 }

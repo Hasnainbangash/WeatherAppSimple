@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             ForEach(cityDetails, id: \.self) { cityDetails in
-                WeatherDetailItemView(cityName: cityDetails.name ?? "Wah")
+                WeatherDetailItemView(cityName: cityDetails.name ?? "Wah", showCloseIcon: false)
             } //: LOOP
         } //: TAB VIEW
         .tabViewStyle(.page)

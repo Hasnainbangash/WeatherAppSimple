@@ -74,7 +74,7 @@ struct WeatherView: View {
             .animation(.default)
             .sheet(isPresented: $showWeatherDetail) {
                 if let city = selectedCity {
-                    WeatherDetailItemView(cityName: city)
+                    WeatherDetailItemView(cityName: city, showCloseIcon: true)
                 }
             }
         } //: NAVIGATION
