@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct WeatherItemView: View {
     // MARK: - PROPERTIES
     
