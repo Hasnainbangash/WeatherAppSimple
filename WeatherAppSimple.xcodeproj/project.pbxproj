@@ -10,6 +10,7 @@
 		0CCE966E39D5C18286B114B8 /* Pods_WeatherAppSimple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251616F1661F8BD89F74F3D /* Pods_WeatherAppSimple.framework */; };
 		C78917D6F4072138830BAB4A /* Pods_WeatherAppSimple_WeatherAppSimpleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366A13E99418D0061A595D35 /* Pods_WeatherAppSimple_WeatherAppSimpleUITests.framework */; };
 		CE592531FEF090E9EE2CB7EF /* Pods_WeatherAppSimpleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FA4E5E6E34C702102EF8DB /* Pods_WeatherAppSimpleTests.framework */; };
+		D015340C2D8BF9AA00FEA7CB /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D015340B2D8BF9AA00FEA7CB /* NVActivityIndicatorView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,22 +48,16 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D02225D92D8976D400774DBB /* WeatherAppSimple */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = WeatherAppSimple;
 			sourceTree = "<group>";
 		};
 		D02225EF2D8976D700774DBB /* WeatherAppSimpleTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = WeatherAppSimpleTests;
 			sourceTree = "<group>";
 		};
 		D02225F92D8976D700774DBB /* WeatherAppSimpleUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = WeatherAppSimpleUITests;
 			sourceTree = "<group>";
 		};
@@ -73,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D015340C2D8BF9AA00FEA7CB /* NVActivityIndicatorView in Frameworks */,
 				0CCE966E39D5C18286B114B8 /* Pods_WeatherAppSimple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +134,6 @@
 				81D3BA571566A9E5BBE38FF7 /* Pods-WeatherAppSimpleTests.debug.xcconfig */,
 				B5AECC7EB1FA047DF422196B /* Pods-WeatherAppSimpleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,6 +237,9 @@
 			);
 			mainGroup = D02225CE2D8976D400774DBB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D015340A2D8BF9AA00FEA7CB /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D02225D82D8976D400774DBB /* Products */;
 			projectDirPath = "";
@@ -674,6 +672,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D015340A2D8BF9AA00FEA7CB /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D015340B2D8BF9AA00FEA7CB /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D015340A2D8BF9AA00FEA7CB /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D02225CF2D8976D400774DBB /* Project object */;
 }
