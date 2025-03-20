@@ -10,6 +10,9 @@ import SwiftUI
 struct WeatherDetailItemView: View {
     // MARK: - PPROPERTIES
     
+    var cityName: String
+    @StateObject private var weatherFetcher = WeatherFetch()
+    
     // MARK: - BODY
     
     var body: some View {
@@ -42,12 +45,15 @@ struct WeatherDetailItemView: View {
                 .padding()
             } //: SCROLL
         } //: ZSTACK
+        .onAppear {
+            weatherFetcher.fetchWeather(cityName: cityName)
+        }
     }
 }
 
 // MARK: - PREVIEW
 
 #Preview {
-    WeatherDetailItemView()
+    WeatherDetailItemView(cityName: "Wah")
         .preferredColorScheme(.dark)
 }

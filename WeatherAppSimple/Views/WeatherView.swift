@@ -17,6 +17,8 @@ struct WeatherView: View {
     @FetchRequest(entity: CityDetails.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CityDetails.name, ascending: true)]) var cityDetails: FetchedResults<CityDetails>
     
     @State var showAddCityView: Bool = false
+    @State private var selectedCity: String? = nil
+    @State private var showWeatherDetail: Bool = false
     
     
     // MARK: - BODY
@@ -28,6 +30,10 @@ struct WeatherView: View {
                     WeatherItemView(cityName: cityDetails.name ?? "Wah")
                         .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
                         .listRowSeparator(.hidden)
+                        .onTapGesture {
+                            self.selectedCity = cityDetails.name
+                            self.showWeatherDetail.toggle()
+                        }
                 }
             } //: LIST
             .navigationBarTitle("Weather", displayMode: .large)
@@ -45,6 +51,12 @@ struct WeatherView: View {
                     .sheet(isPresented: $showAddCityView) {
                         AddCityView(cityManager: cityManager)
                     }
+                }
+            }
+            .animation(.default)
+            .sheet(isPresented: $showWeatherDetail) {
+                if let city = selectedCity {
+                    WeatherDetailItemView(cityName: city)
                 }
             }
         } //: NAVIGATION
