@@ -12,14 +12,7 @@ struct WeatherItemView: View {
     
     var cityName: String
     @StateObject private var weatherFetcher = WeatherFetch()
-    
-    // MARK: - FUNCTIONS
-    
-    func getCurrentTime() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
-        return formatter.string(from: Date())
-    }
+    @StateObject private var weatherItemManager = WeatherItemManager()
     
     // MARK: - BODY
     
@@ -32,7 +25,7 @@ struct WeatherItemView: View {
                             .font(.system(size: 25, weight: .bold, design: .rounded))
                             .foregroundColor(Color.white)
                         
-                        Text(getCurrentTime())
+                        Text(weatherItemManager.getCurrentTime())
                             .font(.system(size: 15, weight: .medium, design: .rounded))
                     }
                     
