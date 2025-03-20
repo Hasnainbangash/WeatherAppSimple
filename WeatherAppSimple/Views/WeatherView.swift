@@ -12,6 +12,8 @@ struct WeatherView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @StateObject var cityManager: AddCityManager = AddCityManager()
     
     @FetchRequest(entity: CityDetails.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CityDetails.name, ascending: true)]) var cityDetails: FetchedResults<CityDetails>
@@ -59,6 +61,7 @@ struct WeatherView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {
                         // ACTION
+                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Image(systemName: "ellipsis.circle")
                             .resizable()

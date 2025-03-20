@@ -12,6 +12,8 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: CityDetails.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CityDetails.name, ascending: true)]) var cityDetails: FetchedResults<CityDetails>
     
+    @State private var showWeatherView = false
+    
     var body: some View {
         TabView {
             ForEach(cityDetails, id: \.self) { cityDetails in
@@ -22,15 +24,18 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
         .overlay(alignment: .topTrailing) {
             Button(action: {
-                // ACTION
-            }, label: {
+                showWeatherView.toggle()
+            }) {
                 Image(systemName: "list.dash")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 25, height: 25, alignment: .center)
-            })
-            .accentColor(Color.white)
-            .padding()
+                    .frame(width: 25, height: 25)
+                    .foregroundColor(.white)
+                    .padding()
+            }
+        }
+        .fullScreenCover(isPresented: $showWeatherView) {
+            WeatherView()
         }
     }
 }
