@@ -34,7 +34,10 @@ struct WeatherView: View {
                             .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
                             .listRowSeparator(.hidden)
                             .onTapGesture {
-                                self.selectedCity = cityDetails.name
+                                DispatchQueue.main.async {
+                                    self.selectedCity = cityDetails.name
+                                }
+                                
                                 self.showWeatherDetail.toggle()
                             }
                     }
