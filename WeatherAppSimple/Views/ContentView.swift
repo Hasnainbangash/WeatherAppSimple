@@ -20,6 +20,18 @@ struct ContentView: View {
         }
         .tabViewStyle(.page)
         .edgesIgnoringSafeArea(.all)
+        .overlay(alignment: .topTrailing) {
+            Button(action: {
+                // ACTION
+            }, label: {
+                Image(systemName: "list.dash")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 27, height: 27, alignment: .center)
+            })
+            .accentColor(Color.white)
+            .padding()
+        }
     }
 }
 
