@@ -10,6 +10,8 @@ import SwiftUI
 struct HourlyWeatherView: View {
     // MARK: - PROPERTIES
     
+    
+    
     // MARK: - BODY
     
     var body: some View {
