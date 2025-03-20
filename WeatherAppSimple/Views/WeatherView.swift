@@ -88,6 +88,15 @@ struct WeatherView: View {
                     WeatherDetailItemView(cityName: city, showCloseIcon: true)
                 }
             }
+            .overlay(alignment: .center) {
+                if cityDetails.isEmpty {
+                    ContentUnavailableView(
+                        "No Weather Data",
+                        systemImage: "icloud.slash",
+                        description: Text("Please add a city to view weather details.")
+                    )
+                }
+            }
         } //: NAVIGATION
     }
 }
