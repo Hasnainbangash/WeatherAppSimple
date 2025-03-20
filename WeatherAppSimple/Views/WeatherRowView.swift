@@ -10,42 +10,52 @@ import SwiftUI
 struct WeatherRowView: View {
     // MARK: - PROPERTIES
     
+    var forecast: DailyWeatherData
+    
     // MARK: - BODY
     
     var body: some View {
-        VStack(alignment: .center, spacing: 12) {
-            HStack(alignment: .center, spacing: 20) {
-                // MARK: - WEATHER WEEKDAY
-                Text("TODAY")
-                    .font(.system(size: 22, weight: .medium, design: .rounded))
-                    .layoutPriority(1)
-                    
+        VStack {
+            HStack {
+                // Weekday Name
+                Text(forecast.day)
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .frame(width: 90, alignment: .leading)
                 
-                // MARK: - WEATHER IMAGE
-                Image(systemName: "sun.max")
+                // Weather Icon
+                Image(systemName: forecast.icon)
                     .resizable()
-                    .foregroundColor(Color.yellow)
-                    .frame(width: 28, height: 26, alignment: .center)
+                    .scaledToFit()
+                    .frame(width: 25, height: 25)
+                    .foregroundColor(.yellow)
                 
-                // MARK: - WEATHER MINIMUM TEMPERATURE
-                Text("15°")
-                    .font(.system(size: 22, weight: .medium, design: .rounded))
-                    .foregroundColor(Color.gray)
+                // Min Temperature
+                Text("\(forecast.minTemp)°")
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .foregroundColor(.gray)
+                    .frame(width: 40, alignment: .trailing)
                 
-                TemperatureRangeView(minTemp: 15, maxTemp: 29)
+                // Temperature Range View (Adjusted Width)
+                TemperatureRangeView(minTemp: forecast.minTemp, maxTemp: forecast.maxTemp)
+                    .frame(maxWidth: .infinity)
                 
-                Text("15°")
-                    .font(.system(size: 22, weight: .medium, design: .rounded))
-            } //: HSTACK
+                // Max Temperature
+                Text("\(forecast.maxTemp)°")
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .frame(width: 40, alignment: .leading)
+            }
+            .padding(.vertical, 12) // Even spacing around the row
             
             Divider()
-        } //: VSTACK
+                .background(Color.gray.opacity(0.4)) // Softer divider line
+        }
+        .padding(.horizontal)
     }
 }
 
 // MARK: - PREVIEW
 
 #Preview {
-    WeatherRowView()
+    WeatherRowView(forecast: DailyWeatherData(day: "Monday", minTemp: 15, maxTemp: 25, icon: "sun.max.fill"))
         .preferredColorScheme(.dark)
 }

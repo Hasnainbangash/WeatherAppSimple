@@ -10,6 +10,8 @@ import SwiftUI
 struct TenDayWeatherView: View {
     // MARK: - PROPERTIES
     
+    var dailyForecast: [DailyWeatherData]
+    
     // MARK: - BODY
     
     var body: some View {
@@ -28,16 +30,9 @@ struct TenDayWeatherView: View {
                 
                 Divider()
                 
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
-                WeatherRowView()
+                ForEach(dailyForecast, id: \.day) { forecast in
+                    WeatherRowView(forecast: forecast)
+                }
             } //: VSTACK
         } //: GROUPBOX
         .background(
@@ -51,6 +46,12 @@ struct TenDayWeatherView: View {
 // MARK: - PREVIEW
 
 #Preview {
-    TenDayWeatherView()
-        .preferredColorScheme(.dark)
+    TenDayWeatherView(dailyForecast: [
+        DailyWeatherData(day: "Monday", minTemp: 15, maxTemp: 25, icon: "sun.max.fill"),
+        DailyWeatherData(day: "Tuesday", minTemp: 16, maxTemp: 26, icon: "cloud.fill"),
+        DailyWeatherData(day: "Wednesday", minTemp: 17, maxTemp: 27, icon: "cloud.rain.fill"),
+        DailyWeatherData(day: "Thursday", minTemp: 14, maxTemp: 24, icon: "wind"),
+    ])
+    .preferredColorScheme(.dark)
+    .preferredColorScheme(.dark)
 }
