@@ -10,7 +10,7 @@ import SwiftUI
 struct HourlyWeatherView: View {
     // MARK: - PROPERTIES
     
-    
+    var hourlyData: [WeatherHourData]
     
     // MARK: - BODY
     
@@ -25,13 +25,14 @@ struct HourlyWeatherView: View {
                 Divider()
                 
                 // Hourly weather forecast
-                HStack {
-                    WeatherHourView()
-                    WeatherHourView()
-                    WeatherHourView()
-                    WeatherHourView()
-                    WeatherHourView()
-                } //: HSTACK
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(hourlyData, id: \.hour) { data in
+                            WeatherHourView(hour: data.hour, temp: data.temp, icon: data.icon)
+                        } //: LOOP
+                    } //: HSTACK
+                    .padding()
+                } //: SCROLL
             } //: VSTACK
         } //: GROUPBOX
         .background(
@@ -45,6 +46,10 @@ struct HourlyWeatherView: View {
 // MARK: - PREVIEW
 
 #Preview {
-    HourlyWeatherView()
-        .preferredColorScheme(.dark)
+    HourlyWeatherView(hourlyData: [
+        WeatherHourData(hour: "1 AM", temp: 21, icon: "cloud.sun"),
+        WeatherHourData(hour: "2 AM", temp: 20, icon: "cloud.sun.rain"),
+        WeatherHourData(hour: "3 AM", temp: 19, icon: "cloud.rain")
+    ])
+    .preferredColorScheme(.dark)
 }
