@@ -116,6 +116,7 @@ struct WeatherDetailItemView: View {
             // MARK: - FETCH WEATHER DATA
             weatherFetcher.fetchWeather(cityName: cityName)
         }
+        .animation(.easeInOut(duration: 1.5))
     }
 }
 
