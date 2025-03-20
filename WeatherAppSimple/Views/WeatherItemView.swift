@@ -15,6 +15,14 @@ struct WeatherItemView: View {
     var cityName: String
     @StateObject private var weatherFetcher = WeatherFetch()
     
+    // MARK: - FUNCTIONS
+    
+    func getCurrentTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
+        return formatter.string(from: Date())
+    }
+    
     // MARK: - BODY
     
     var body: some View {
@@ -64,12 +72,6 @@ struct WeatherItemView: View {
         .onAppear {
             weatherFetcher.fetchWeather(cityName: cityName)
         }
-    }
-    
-    func getCurrentTime() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
-        return formatter.string(from: Date())
     }
 }
 
