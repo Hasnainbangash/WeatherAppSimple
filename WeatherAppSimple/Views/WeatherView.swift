@@ -36,6 +36,7 @@ struct WeatherView: View {
                             self.selectedCity = cityDetails.name
                             self.showWeatherDetail.toggle()
                         }
+                        .animation(.easeInOut(duration: 1.5))
                 }
             } //: LIST
             .navigationBarTitle("Weather", displayMode: .large)
@@ -71,7 +72,7 @@ struct WeatherView: View {
                     .accentColor(Color.white)
                 }
             }
-            .animation(.default)
+            .animation(.easeInOut(duration: 1.5))
             .sheet(isPresented: $showWeatherDetail) {
                 if let city = selectedCity {
                     WeatherDetailItemView(cityName: city, showCloseIcon: true)
