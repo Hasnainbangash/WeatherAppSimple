@@ -18,13 +18,13 @@ struct ContentView: View {
         TabView {
             ForEach(cityDetails, id: \.self) { cityDetails in
                 WeatherDetailItemView(cityName: cityDetails.name ?? "Wah")
-            }
-        }
+            } //: LOOP
+        } //: TAB VIEW
         .tabViewStyle(.page)
         .edgesIgnoringSafeArea(.all)
         .overlay(alignment: .topTrailing) {
             Button(action: {
-                showWeatherView.toggle()
+                self.showWeatherView.toggle()
             }) {
                 Image(systemName: "list.dash")
                     .resizable()
