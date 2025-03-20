@@ -40,6 +40,12 @@ struct WeatherView: View {
                                 
                                 self.showWeatherDetail.toggle()
                             }
+                    } //: ANIMATION
+                } //: LOOP
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        let city = cityDetails[index]
+                        cityManager.deleteCity(context: managedObjectContext, city: city)
                     }
                 }
             } //: LIST

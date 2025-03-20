@@ -22,4 +22,16 @@ class AddCityManager: ObservableObject {
             print("Failed to save city: \(error.localizedDescription)")
         }
     }
+    
+    // Function to delete a city from Core Data
+    func deleteCity(context: NSManagedObjectContext, city: CityDetails) {
+        context.delete(city)
+        
+        do {
+            try context.save()
+            print("City deleted successfully: \(city.name ?? "Unknown")")
+        } catch {
+            print("Failed to delete city: \(error.localizedDescription)")
+        }
+    }
 }
