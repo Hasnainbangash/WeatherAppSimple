@@ -67,7 +67,7 @@ struct WeatherDetailItemView: View {
                         
                         // MARK: - TEN DAYS WEATHER VIEW
                         if let weather = weatherFetcher.weather {
-                            let dailyData = extractDailyForecast(from: weather.list)
+                            let dailyData = weatherDetailManager.extractDailyForecast(from: weather.list)
                             TenDayWeatherView(dailyForecast: dailyData)
                         }
                         

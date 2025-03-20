@@ -30,4 +30,25 @@ class WeatherDetailItemManager: ObservableObject {
         return formatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
     }
     
+    func extractDailyForecast(from list: [WeatherEntry]) -> [DailyWeatherData] {
+        var dailyForecast: [DailyWeatherData] = []
+        var lastDate: String = ""
+        
+        for entry in list {
+            let day = formatDate(entry.dt)
+            
+            if day != lastDate { // Ensures only one entry per day
+                lastDate = day
+                dailyForecast.append(DailyWeatherData(
+                    day: day,
+                    minTemp: Int(entry.main.temp_min),
+                    maxTemp: Int(entry.main.temp_max),
+                    icon: getWeatherIcon(entry.weather.first?.main ?? "Clear")
+                ))
+            }
+        }
+        
+        return dailyForecast
+    }
+    
 }

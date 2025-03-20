@@ -16,27 +16,6 @@ struct DailyWeatherData {
     let icon: String
 }
 
-func extractDailyForecast(from list: [WeatherEntry]) -> [DailyWeatherData] {
-    var dailyForecast: [DailyWeatherData] = []
-    var lastDate: String = ""
-    
-    for entry in list {
-        let day = formatDate(entry.dt)
-        
-        if day != lastDate { // Ensures only one entry per day
-            lastDate = day
-            dailyForecast.append(DailyWeatherData(
-                day: day,
-                minTemp: Int(entry.main.temp_min),
-                maxTemp: Int(entry.main.temp_max),
-                icon: getWeatherIcon(entry.weather.first?.main ?? "Clear")
-            ))
-        }
-    }
-    
-    return dailyForecast
-}
-
 func formatDate(_ timestamp: Int) -> String {
     let formatter = DateFormatter()
     formatter.dateFormat = "EEEE"
