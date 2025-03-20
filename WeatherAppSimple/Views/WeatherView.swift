@@ -77,7 +77,7 @@ struct WeatherView: View {
                 }
             }
             .animation(.easeInOut(duration: 1.5))
-            .sheet(isPresented: $showWeatherDetail) {
+            .fullScreenCover(isPresented: $showWeatherDetail) {
                 if let city = selectedCity {
                     WeatherDetailItemView(cityName: city, showCloseIcon: true)
                 }
