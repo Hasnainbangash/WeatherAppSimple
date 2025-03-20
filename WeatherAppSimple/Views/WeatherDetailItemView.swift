@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WeatherDetailItemView: View {
-    // MARK: - PPROPERTIES
+    // MARK: - PROPERTIES
     
     var cityName: String
     @StateObject private var weatherFetcher = WeatherFetch()
@@ -49,44 +49,58 @@ struct WeatherDetailItemView: View {
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             
-            ScrollView(.vertical, showsIndicators: false) {
+            // MARK: - LOADING INDICATOR
+            if weatherFetcher.isLoading {
                 VStack {
-                    // MARK: - HEADER VIEW
-                    Section {
-                        HStack(alignment: .center) {
-                            Spacer()
-                            WeatherDetailHeaderView(cityName: cityName)
-                            Spacer()
-                        } //: HSTACK
-                    } //: SECTION
+                    ProgressView() // <-- DEFAULT SWIFTUI LOADING INDICATOR
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .scaleEffect(1.5) // Make it larger
+                        .padding()
                     
-                    Spacer(minLength: 30)
-                    
-                    // MARK: - HOURLY WEATHER VIEW
-                    if let weather = weatherFetcher.weather {
-                        let hourlyData = weather.list.prefix(8).map { forecast in
-                            WeatherHourData(
-                                hour: formatHour(forecast.dt),
-                                temp: Int(forecast.main.temp),
-                                icon: getWeatherIcon(forecast.weather[0].main)
-                            )
+                    Text("Fetching weather...")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                }
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        // MARK: - HEADER VIEW
+                        Section {
+                            HStack(alignment: .center) {
+                                Spacer()
+                                WeatherDetailHeaderView(cityName: cityName)
+                                Spacer()
+                            } //: HSTACK
+                        } //: SECTION
+                        
+                        Spacer(minLength: 30)
+                        
+                        // MARK: - HOURLY WEATHER VIEW
+                        if let weather = weatherFetcher.weather {
+                            let hourlyData = weather.list.prefix(8).map { forecast in
+                                WeatherHourData(
+                                    hour: formatHour(forecast.dt),
+                                    temp: Int(forecast.main.temp),
+                                    icon: getWeatherIcon(forecast.weather[0].main)
+                                )
+                            }
+                            HourlyWeatherView(hourlyData: hourlyData)
                         }
-                        HourlyWeatherView(hourlyData: hourlyData)
-                    }
-                    
-                    // MARK: - TEN DAYS WEATHER VIEW
-                    if let weather = weatherFetcher.weather {
-                        let dailyData = extractDailyForecast(from: weather.list)
-                        TenDayWeatherView(dailyForecast: dailyData)
-                    }
-                    
-                } //: VSTACK
-                .padding()
-            } //: SCROLL
+                        
+                        // MARK: - TEN DAYS WEATHER VIEW
+                        if let weather = weatherFetcher.weather {
+                            let dailyData = extractDailyForecast(from: weather.list)
+                            TenDayWeatherView(dailyForecast: dailyData)
+                        }
+                        
+                    } //: VSTACK
+                    .padding()
+                } //: SCROLL
+            }
         } //: ZSTACK
         .overlay(alignment: .topTrailing) {
             Button(action: {
-                // ACTION
+                // MARK: - CLOSE BUTTON ACTION
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "xmark")
@@ -99,6 +113,7 @@ struct WeatherDetailItemView: View {
             .accentColor(Color.white)
         }
         .onAppear {
+            // MARK: - FETCH WEATHER DATA
             weatherFetcher.fetchWeather(cityName: cityName)
         }
     }

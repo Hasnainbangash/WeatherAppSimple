@@ -10,10 +10,12 @@ import SwiftUI
 class WeatherFetch: ObservableObject {
     
     @Published var weather: Weather?
+    @Published var isLoading: Bool = false
     
     let weatherURL = "https://api.openweathermap.org/data/2.5/forecast?appid=41c7c8a410b7f880b4ce8425ffc6695c&units=metric"
     
     func fetchWeather(cityName: String) {
+        isLoading = true
         let urlString = "\(weatherURL)&q=\(cityName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? cityName)"
         performRequest(with: urlString)
     }
@@ -29,6 +31,7 @@ class WeatherFetch: ObservableObject {
             
             if let safeData = data {
                 DispatchQueue.main.async {
+                    self?.isLoading = false
                     self?.weather = self?.parseJSON(safeData)
                 }
             }
