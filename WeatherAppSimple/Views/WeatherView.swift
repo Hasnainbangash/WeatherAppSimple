@@ -29,14 +29,15 @@ struct WeatherView: View {
         NavigationView {
             List {
                 ForEach(self.cityDetails, id: \.self) { cityDetails in
-                    WeatherItemView(cityName: cityDetails.name ?? "Wah")
-                        .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
-                        .listRowSeparator(.hidden)
-                        .onTapGesture {
-                            self.selectedCity = cityDetails.name
-                            self.showWeatherDetail.toggle()
-                        }
-                        .animation(.easeInOut(duration: 1.5))
+                    withAnimation(.easeIn(duration: 1.5)) {
+                        WeatherItemView(cityName: cityDetails.name ?? "Wah")
+                            .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
+                            .listRowSeparator(.hidden)
+                            .onTapGesture {
+                                self.selectedCity = cityDetails.name
+                                self.showWeatherDetail.toggle()
+                            }
+                    }
                 }
             } //: LIST
             .navigationBarTitle("Weather", displayMode: .large)
@@ -64,7 +65,7 @@ struct WeatherView: View {
                         // ACTION
                         self.presentationMode.wrappedValue.dismiss()
                     }, label: {
-                        Image(systemName: "ellipsis.circle")
+                        Image(systemName: "arrow.left")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 25, height: 25, alignment: .center)
