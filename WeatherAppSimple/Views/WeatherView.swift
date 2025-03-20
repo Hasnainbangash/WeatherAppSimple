@@ -29,7 +29,7 @@ struct WeatherView: View {
         NavigationView {
             List {
                 ForEach(self.cityDetails, id: \.self) { cityDetails in
-                    withAnimation(.easeIn(duration: 1.5)) {
+                    withAnimation(.spring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.2)) {
                         WeatherItemView(cityName: cityDetails.name ?? "Wah")
                             .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
                             .listRowSeparator(.hidden)
