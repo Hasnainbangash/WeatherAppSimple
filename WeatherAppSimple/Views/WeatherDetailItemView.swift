@@ -12,7 +12,7 @@ struct WeatherDetailItemView: View {
     
     var cityName: String
     @StateObject private var weatherFetcher = WeatherFetch()
-    @State private var weatherDetailManager = WeatherDetailItemManager()
+    @StateObject private var weatherDetailManager = WeatherDetailItemManager()
     
     @Environment(\.presentationMode) var presentationMode
     
