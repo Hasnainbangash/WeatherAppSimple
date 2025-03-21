@@ -9,10 +9,16 @@ import SwiftUI
 
 class WeatherItemManager: ObservableObject {
     
+    @Published var weatherFetch = WeatherFetch()
+    
     func getCurrentTime() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
         return formatter.string(from: Date())
+    }
+    
+    func fetchingWeather(cityName: String) {
+        weatherFetch.fetchWeather(cityName: cityName)
     }
     
 }
