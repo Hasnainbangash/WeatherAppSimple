@@ -11,13 +11,14 @@ struct WeatherItemView: View {
     // MARK: - PROPERTIES
     
     var cityName: String
+    @StateObject private var weatherFetcher = WeatherFetch()
     @StateObject private var weatherItemManager = WeatherItemManager()
     
     // MARK: - BODY
     
     var body: some View {
         VStack(spacing: 25) {
-            if let weather = weatherItemManager.weatherFetch.weather {
+            if let weather = weatherFetcher.weather {
                 HStack {
                     VStack(alignment: .leading) {
                         Text(weather.city.name)
@@ -60,7 +61,7 @@ struct WeatherItemView: View {
                 .frame(width: 370, height: 140)
         )
         .onAppear {
-            weatherItemManager.weatherFetch.fetchWeather(cityName: cityName)
+            weatherFetcher.fetchWeather(cityName: cityName)
         }
     }
 }
