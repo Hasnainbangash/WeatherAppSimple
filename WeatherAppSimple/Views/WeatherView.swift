@@ -22,25 +22,22 @@ struct WeatherView: View {
     @State private var selectedCity: String? = nil
     @State private var showWeatherDetail: Bool = false
     
-    
     // MARK: - BODY
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(self.cityDetails, id: \.self) { cityDetails in
-                    withAnimation(.spring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.2)) {
-                        WeatherItemView(cityName: cityDetails.name ?? "Wah")
-                            .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
-                            .listRowSeparator(.hidden)
-                            .onTapGesture {
-                                DispatchQueue.main.async {
-                                    self.selectedCity = cityDetails.name
-                                }
-                                
-                                self.showWeatherDetail.toggle()
+                    WeatherItemView(cityName: cityDetails.name ?? "Wah")
+                        .listRowInsets(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
+                        .listRowSeparator(.hidden)
+                        .onTapGesture {
+                            DispatchQueue.main.async {
+                                self.selectedCity = cityDetails.name
                             }
-                    } //: ANIMATION
+                            
+                            self.showWeatherDetail.toggle()
+                        }
                 } //: LOOP
                 .onDelete { indexSet in
                     for index in indexSet {
@@ -82,7 +79,6 @@ struct WeatherView: View {
                     .accentColor(Color.white)
                 }
             }
-            .animation(.easeInOut(duration: 1.5))
             .fullScreenCover(isPresented: $showWeatherDetail) {
                 if let city = selectedCity {
                     WeatherDetailItemView(cityName: city, showCloseIcon: true)
