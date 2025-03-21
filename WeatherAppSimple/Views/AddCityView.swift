@@ -30,7 +30,9 @@ struct AddCityView: View {
                 Button(action: {
                     print("City Added: \(cityName)")
                     cityManager.addCity(context: self.viewContext, name: cityName)
-                    self.presentationMode.wrappedValue.dismiss()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
                 }) {
                     Text("Add City")
                         .frame(maxWidth: .infinity)

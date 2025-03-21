@@ -22,6 +22,8 @@ struct WeatherView: View {
     @State private var selectedCity: String? = nil
     @State private var showWeatherDetail: Bool = false
     
+    @State private var isAnimating: Bool = false
+    
     // MARK: - BODY
     
     var body: some View {
@@ -38,6 +40,17 @@ struct WeatherView: View {
                             
                             self.showWeatherDetail.toggle()
                         }
+                        .offset(y: self.isAnimating ? 0 : -80)
+                        .opacity(self.isAnimating ? 1 : 0)
+                        .animation(
+                            Animation.spring(
+                                response: 0.6,
+                                dampingFraction: 0.6,
+                                blendDuration: 0.6
+                            )
+                            .delay(1),
+                            value: self.isAnimating
+                        )
                 } //: LOOP
                 .onDelete { indexSet in
                     for index in indexSet {
@@ -92,6 +105,16 @@ struct WeatherView: View {
                         description: Text("Please add a city to view weather details.")
                     )
                 }
+            }
+            .onAppear {
+                withAnimation {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        self.isAnimating = true
+                    }
+                }
+            }
+            .onDisappear {
+                self.isAnimating = false
             }
         } //: NAVIGATION
     }
