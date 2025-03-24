@@ -81,10 +81,8 @@ struct WeatherItemView: View {
         )
         .onAppear {
             weatherFetcher.fetchWeather(cityName: cityName)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                withAnimation {
-                    isAnimating = true
-                }
+            withAnimation {
+                self.isAnimating = true
             }
         }
     }
