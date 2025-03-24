@@ -13,6 +13,7 @@ struct AddCityView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var cityManager: AddCityManager
     @State var cityName: String = ""
+    @State private var showAlert: Bool = false
     
     // MARK: - BODY
     
@@ -30,9 +31,7 @@ struct AddCityView: View {
                 Button(action: {
                     print("City Added: \(cityName)")
                     cityManager.addCity(context: self.viewContext, name: cityName)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }
+                    showAlert = true
                 }) {
                     Text("Add City")
                         .frame(maxWidth: .infinity)
@@ -42,6 +41,13 @@ struct AddCityView: View {
                         .cornerRadius(10)
                 } //: BUTTON
                 .padding(.horizontal)
+                .alert("City Added", isPresented: $showAlert) {
+                    Button("OK") {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                } message: {
+                    Text("\(cityName) has been added successfully.")
+                }
                 
                 Spacer()
             } //: VSTACK
