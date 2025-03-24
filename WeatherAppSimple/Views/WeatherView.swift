@@ -71,7 +71,7 @@ struct WeatherView: View {
                         Image(systemName: "plus")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 25, height: 25, alignment: .center)
+                            .frame(width: 20, height: 20, alignment: .center)
                     })
                     .accentColor(Color.white)
                     .sheet(isPresented: $showAddCityView) {
@@ -87,7 +87,7 @@ struct WeatherView: View {
                         Image(systemName: "arrow.left")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 25, height: 25, alignment: .center)
+                            .frame(width: 20, height: 20, alignment: .center)
                     })
                     .accentColor(Color.white)
                 }
