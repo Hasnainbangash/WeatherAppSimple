@@ -35,7 +35,7 @@ struct WeatherItemView: View {
                             .offset(y: isAnimating ? 0 : -50)
                             .opacity(isAnimating ? 1 : 0)
                             .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                    }
+                    } //: VSTACK
                     
                     Spacer()
                     
@@ -45,7 +45,7 @@ struct WeatherItemView: View {
                         .offset(y: isAnimating ? 0 : -50)
                         .opacity(isAnimating ? 1 : 0)
                         .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                }
+                } //: HSTACK
                 
                 HStack {
                     Text(weather.list[0].weather[0].main)
@@ -61,13 +61,13 @@ struct WeatherItemView: View {
                         .offset(y: isAnimating ? 0 : -50)
                         .opacity(isAnimating ? 1 : 0)
                         .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                }
+                } //: HSTACK
             } else {
                 Text("Loading...")
                     .font(.headline)
                     .foregroundColor(.white)
             }
-        }
+        } //: VSTACK
         .padding()
         .cornerRadius(10)
         .background(
