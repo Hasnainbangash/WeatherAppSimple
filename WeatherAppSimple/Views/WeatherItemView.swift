@@ -78,9 +78,6 @@ struct WeatherItemView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .frame(width: 370, height: 140)
             }
-                .offset(y: isAnimating ? 0 : -80)
-                .opacity(isAnimating ? 1 : 0)
-                .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6), value: isAnimating)
         )
         .onAppear {
             weatherFetcher.fetchWeather(cityName: cityName)
