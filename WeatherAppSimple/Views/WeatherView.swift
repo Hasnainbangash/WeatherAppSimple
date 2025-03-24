@@ -40,7 +40,7 @@ struct WeatherView: View {
                             
                             self.showWeatherDetail.toggle()
                         }
-                        .offset(y: self.isAnimating ? 0 : -80)
+                        .offset(y: self.isAnimating ? 0 : -50)
                         .opacity(self.isAnimating ? 1 : 0)
                         .animation(
                             Animation.spring(
