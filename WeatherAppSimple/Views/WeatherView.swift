@@ -63,6 +63,19 @@ struct WeatherView: View {
             .listStyle(.plain)
             .scrollIndicators(.hidden)
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        // ACTION
+                        self.presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "arrow.left")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20, alignment: .center)
+                    })
+                    .accentColor(Color.white)
+                }
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
                         // Action
@@ -76,20 +89,8 @@ struct WeatherView: View {
                     .accentColor(Color.white)
                     .sheet(isPresented: $showAddCityView) {
                         AddCityView(cityManager: cityManager)
+                            .presentationDragIndicator(.visible)
                     }
-                }
-                
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {
-                        // ACTION
-                        self.presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        Image(systemName: "arrow.left")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20, alignment: .center)
-                    })
-                    .accentColor(Color.white)
                 }
             }
             .fullScreenCover(isPresented: $showWeatherDetail) {
