@@ -30,7 +30,7 @@ struct WeatherItemView: View {
                             .offset(y: isAnimating ? 0 : -50)
                             .opacity(isAnimating ? 1 : 0)
                             .onAppear {
-                                self.isAnimating.toggle()
+                                self.isAnimating = true
                             }
                         
                         Text(weatherItemManager.getCurrentTime())
