@@ -14,7 +14,11 @@ struct WeatherItemView: View {
     @StateObject private var weatherFetcher = WeatherFetch()
     @StateObject private var weatherItemManager = WeatherItemManager()
     
-    @State private var isAnimating: Bool = false
+    @State private var nameAnimating: Bool = false
+    @State private var timeAnimating: Bool = false
+    @State private var tempAnimating: Bool = false
+    @State private var weatherConditionAnimating: Bool = false
+    @State private var HLTempAnimating: Bool = false
     
     // MARK: - BODY
     
@@ -26,18 +30,25 @@ struct WeatherItemView: View {
                         Text(weather.city.name)
                             .font(.system(size: 25, weight: .bold, design: .rounded))
                             .foregroundColor(Color.white)
-                            .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                            .offset(y: isAnimating ? 0 : -50)
-                            .opacity(isAnimating ? 1 : 0)
+                            .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: nameAnimating)
+                            .offset(y: nameAnimating ? 0 : -50)
+                            .opacity(nameAnimating ? 1 : 0)
                             .onAppear {
-                                self.isAnimating = true
+                                withAnimation {
+                                    self.nameAnimating.toggle()
+                                }
                             }
                         
                         Text(weatherItemManager.getCurrentTime())
                             .font(.system(size: 15, weight: .medium, design: .rounded))
-                            .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                            .offset(y: isAnimating ? 0 : -50)
-                            .opacity(isAnimating ? 1 : 0)
+                            .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: timeAnimating)
+                            .offset(y: timeAnimating ? 0 : -50)
+                            .opacity(timeAnimating ? 1 : 0)
+                            .onAppear {
+                                withAnimation {
+                                    self.timeAnimating.toggle()
+                                }
+                            }
                     } //: VSTACK
                     
                     Spacer()
@@ -45,25 +56,40 @@ struct WeatherItemView: View {
                     Text("\(Int(weather.list[0].main.temp))°")
                         .font(.system(size: 53, weight: .light, design: .rounded))
                         .foregroundColor(Color.white)
-                        .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                        .offset(y: isAnimating ? 0 : -50)
-                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: tempAnimating)
+                        .offset(y: tempAnimating ? 0 : -50)
+                        .opacity(tempAnimating ? 1 : 0)
+                        .onAppear {
+                            withAnimation {
+                                self.tempAnimating.toggle()
+                            }
+                        }
                 } //: HSTACK
                 
                 HStack {
                     Text(weather.list[0].weather[0].main)
                         .font(.system(size: 16, weight: .medium, design: .rounded))
-                        .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                        .offset(y: isAnimating ? 0 : -50)
-                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: weatherConditionAnimating)
+                        .offset(y: weatherConditionAnimating ? 0 : -50)
+                        .opacity(weatherConditionAnimating ? 1 : 0)
+                        .onAppear {
+                            withAnimation {
+                                self.weatherConditionAnimating.toggle()
+                            }
+                        }
                     
                     Spacer()
                     
                     Text("H:\(Int(weather.list[0].main.temp_max))° L:\(Int(weather.list[0].main.temp_min))°")
                         .font(.system(size: 15, weight: .medium, design: .rounded))
-                        .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
-                        .offset(y: isAnimating ? 0 : -50)
-                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: HLTempAnimating)
+                        .offset(y: HLTempAnimating ? 0 : -50)
+                        .opacity(HLTempAnimating ? 1 : 0)
+                        .onAppear {
+                            withAnimation {
+                                self.HLTempAnimating.toggle()
+                            }
+                        }
                 } //: HSTACK
             } else {
                 Text("Loading...")
