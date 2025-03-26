@@ -29,6 +29,9 @@ struct WeatherItemView: View {
                             .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6).delay(0.5), value: isAnimating)
                             .offset(y: isAnimating ? 0 : -50)
                             .opacity(isAnimating ? 1 : 0)
+                            .onAppear {
+                                self.isAnimating.toggle()
+                            }
                         
                         Text(weatherItemManager.getCurrentTime())
                             .font(.system(size: 15, weight: .medium, design: .rounded))
@@ -81,9 +84,9 @@ struct WeatherItemView: View {
         )
         .onAppear {
             weatherFetcher.fetchWeather(cityName: cityName)
-            withAnimation {
-                self.isAnimating = true
-            }
+//            withAnimation {
+//                self.isAnimating = true
+//            }
         }
     }
 }
