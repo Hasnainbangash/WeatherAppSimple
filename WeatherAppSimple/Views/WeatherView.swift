@@ -103,7 +103,7 @@ struct WeatherView: View {
                     ContentUnavailableView(
                         "No Weather Data",
                         systemImage: "icloud.slash",
-                        description: Text("Please add a city to view weather details.")
+                        description: Text("Please add a city to view weathers")
                     )
                 }
             }
